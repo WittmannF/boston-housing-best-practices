@@ -74,6 +74,9 @@ plt.show()
 ```
 ![download 2](https://user-images.githubusercontent.com/5733246/51628193-7c3df200-1f2b-11e9-906c-667c9184ce70.png)
 
+- Exemplos de curvas de aprendizado ([referência]())
+![](https://sebastianraschka.com/images/faq/ml-solvable/bias-variance.png)
+
 - Referências complementares sobre Curvas de Aprendizado:
 
     - [Katie’s lesson on Accuracy vs Training Set size](https://www.youtube.com/watch?v=9w1Yi5nMNgw)
@@ -82,6 +85,9 @@ plt.show()
 
 - A seguinte imagem ilustra bias e variância elevados para classificação e regressão ([ref](https://www.youtube.com/watch?v=dBLZg-RqoLg)):
 ![maxresdefault](https://i.ytimg.com/vi/dBLZg-RqoLg/maxresdefault.jpg)
+
+- Exemplo de curva de complexidade ([referência](https://jakevdp.github.io/PythonDataScienceHandbook/05.03-hyperparameters-and-model-validation.html)):
+![](https://jakevdp.github.io/PythonDataScienceHandbook/figures/05.03-validation-curve.png)
 
 - A seguinte imagem sumariza os como os dados foram subdivididos neste projeto:
 
