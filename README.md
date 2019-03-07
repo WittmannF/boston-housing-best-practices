@@ -2,10 +2,13 @@
 
 ## Links Importantes
 - [The Elements of Statistical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/)
-
+- https://github.com/udacity/br-machine-learning
+- http://scikit-learn.org/stable/modules/cross_validation.html
+- https://en.wikipedia.org/wiki/Cross-validation_%28statistics%29#Purpose_of_cross-validation
 
 ## Checklist (erros mais comuns)
 - Utilizar a biblioteca numpy para executar os cálculos necessários em **Implementação: Calcular Estatísticas**
+- 
 
 
 ## Dicas
@@ -70,3 +73,49 @@ plt.legend(loc=0)
 plt.show()
 ```
 ![download 2](https://user-images.githubusercontent.com/5733246/51628193-7c3df200-1f2b-11e9-906c-667c9184ce70.png)
+
+- Referências complementares sobre Curvas de Aprendizado:
+
+    - [Katie’s lesson on Accuracy vs Training Set size](https://www.youtube.com/watch?v=9w1Yi5nMNgw)
+    - [Andrew Ng. Class on Learning Curve](https://www.coursera.org/learn/machine-learning/lecture/Kont7/learning-curves)
+    - https://www.blaenkdenum.com/notes/machine-learning/#learning-curves
+
+- A seguinte imagem ilustra bias e variância elevados para classificação e regressão ([ref](https://www.youtube.com/watch?v=dBLZg-RqoLg)):
+![maxresdefault](https://i.ytimg.com/vi/dBLZg-RqoLg/maxresdefault.jpg)
+
+- A seguinte imagem sumariza os como os dados foram subdivididos neste projeto:
+
+![K-foldCross.png](https://udacity-github-sync-content.s3.amazonaws.com/_attachments/38140/1485736387/K-foldCross.png)](https://udacity-github-sync-content.s3.amazonaws.com/_attachments/38140/1485736387/K-foldCross.png)
+
+- Este é o código que foi utilizado na análise de sensibilidade:
+```
+def PredictTrials(X, y, fitter, data):
+    """ Performs trials of fitting and predicting data. """
+
+    # Store the predicted prices
+    prices = []
+
+    for k in range(10):
+        # Split the data
+        X_train, X_test, y_train, y_test = train_test_split(X, y, \
+            test_size = 0.2, random_state = k)
+        
+        # Fit the data
+        reg = fitter(X_train, y_train)
+        
+        # Make a prediction
+        pred = reg.predict([data[0]])[0]
+        prices.append(pred)
+        
+        # Result
+        print "Trial {}: ${:,.2f}".format(k+1, pred)
+
+    # Display price range
+    print "\nRange in prices: ${:,.2f}".format(max(prices) - min(prices))
+```
+Alguns comentários:
+    - A única coisa que mudou em cada *trial* foi o valor de `random_state` em `train_test_split`. 
+    - Em todos os testes, o modelo está tentando prever um preço a partir dos primeiros atributos `client_data` no quais são `[5, 17, 15]`.
+    - Este projeto não pediu para o aluno obter uma estimativa final do modelo a partir do conjunto de teste. Caso você queira calcular à parte, basta utilizar a função `performance_metric(y_test, reg.predict(X_test))`. O coeficiente de determinação R2 retornado será em torno de `0.77`.
+
+
