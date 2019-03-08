@@ -5,6 +5,7 @@
 - https://github.com/udacity/br-machine-learning
 - http://scikit-learn.org/stable/modules/cross_validation.html
 - https://en.wikipedia.org/wiki/Cross-validation_%28statistics%29#Purpose_of_cross-validation
+- http://www.r2d3.us/uma-introducao-visual-ao-aprendizado-de-maquina-1/
 
 ## Checklist (erros mais comuns)
 - Utilizar a biblioteca numpy para executar os cálculos necessários em **Implementação: Calcular Estatísticas**
