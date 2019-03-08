@@ -119,7 +119,8 @@ def PredictTrials(X, y, fitter, data):
     # Display price range
     print "\nRange in prices: ${:,.2f}".format(max(prices) - min(prices))
 ```
-Alguns comentários:
+
+- Alguns comentários:
     - A única coisa que mudou em cada *trial* foi o valor de `random_state` em `train_test_split`. 
     - Em todos os testes, o modelo está tentando prever um preço a partir dos primeiros atributos `client_data` no quais são `[5, 17, 15]`.
     - Este projeto não pediu para o aluno obter uma estimativa final do modelo a partir do conjunto de teste. Caso você queira calcular à parte, basta utilizar a função `performance_metric(y_test, reg.predict(X_test))`. O coeficiente de determinação R2 retornado será em torno de `0.77`.
