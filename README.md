@@ -92,7 +92,7 @@ plt.show()
 
 - A seguinte imagem sumariza os como os dados foram subdivididos neste projeto:
 
-![K-foldCross.png](https://udacity-github-sync-content.s3.amazonaws.com/_attachments/38140/1485736387/K-foldCross.png)](https://udacity-github-sync-content.s3.amazonaws.com/_attachments/38140/1485736387/K-foldCross.png)
+![K-foldCross.png](https://udacity-github-sync-content.s3.amazonaws.com/_attachments/38140/1485736387/K-foldCross.png)
 
 - Este é o código que foi utilizado na análise de sensibilidade:
 ```
