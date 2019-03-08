@@ -8,7 +8,7 @@
 
 ## Checklist (erros mais comuns)
 - Utilizar a biblioteca numpy para executar os cálculos necessários em **Implementação: Calcular Estatísticas**
-- 
+- Atente que a lista de profundidade máximas está de fato variando de 1 à 10 em **Implementação: Ajustar um Modelo**
 
 
 ## Dicas
